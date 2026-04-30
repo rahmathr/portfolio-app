@@ -1,16 +1,88 @@
-# React + Vite
+# Portfolio App — Rahmat Hidayat Ramadhan
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal portfolio website built with **React + Vite**, styled using **Tailwind CSS**, and tested with **Vitest**.
 
-Currently, two official plugins are available:
+## 🚀 Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+| Kategori | Teknologi |
+|---|---|
+| Framework | React 19 |
+| Build Tool | Vite 7 |
+| Styling | Tailwind CSS 3 + manual CSS-in-JS |
+| Icons | Lucide React |
+| Testing | Vitest + Testing Library |
 
-## React Compiler
+## 📄 Halaman
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Home** — Hero section dengan highlight skill (Clean Code, Modern Design, Performance)
+- **About** — Cerita singkat, pendidikan (Universitas Bina Sarana Informatika, 2024–2028), technical skills, dan interests
+- **Projects** — Grid project cards dengan lazy loading (`React.lazy` + `Suspense`)
+- **Contact** — Form kontak dengan validasi, info email (`rahmathr.king@gmail.com`), dan link sosial
 
-## Expanding the ESLint configuration
+## ✨ Fitur
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Dark mode** — toggle via tombol di navbar, diterapkan ke seluruh halaman
+- **Responsive** — layout mobile-friendly dengan hamburger menu
+- **Lazy loading** — ProjectCard di-load secara lazy untuk performa lebih baik
+- **Form validation** — validasi nama (min 2 karakter), email (format regex), dan pesan (min 10 karakter)
+- **SPA routing** — navigasi antar halaman tanpa reload (state-based routing)
+
+## 🛠️ Cara Menjalankan
+
+```bash
+# Install dependencies
+npm install
+
+# Jalankan development server
+npm run dev
+
+# Build untuk production
+npm run build
+
+# Preview hasil build
+npm run preview
+```
+
+## 🧪 Testing
+
+```bash
+# Jalankan semua test
+npm test
+
+# Jalankan test dengan UI
+npm run test:ui
+```
+
+Test ditulis menggunakan **Vitest** dan **@testing-library/react**. Test case yang ada:
+
+- Render halaman home dengan nama yang benar
+- Validasi format email
+- Validasi panjang nama
+- Toggle dark mode bekerja dengan benar
+- Navigasi antar halaman berfungsi
+
+## 📁 Struktur Project
+
+```
+portfolio-app/
+├── public/
+│   └── vite.svg
+├── src/
+│   ├── App.jsx          # Komponen utama (semua halaman & logika)
+│   ├── App.test.jsx     # Unit tests
+│   ├── App.css
+│   ├── main.jsx
+│   ├── index.css
+│   └── setupTests.js
+├── index.html
+├── vite.config.js
+├── tailwind.config.js
+├── postcss.config.js
+└── package.json
+```
+
+## 🔗 Kontak
+
+- **GitHub**: [@rahmathr](https://github.com/rahmathr)
+- **LinkedIn**: [linkedin.com/in/rahmathr](https://www.linkedin.com/in/rahmathr/)
+- **Email**: rahmathr.king@gmail.com
